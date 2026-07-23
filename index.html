@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Local</title>
+
+    <link rel="stylesheet" href="./estilos/brite.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-2.3.2/datatables.min.css">
+    <link rel="stylesheet" href="./estilos/estilos.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-2.3.2/datatables.min.js"></script>
+    <script src="./scripts/inicio.js"></script>
+</head>
+
+<body>
+
+    <nav id="menuNavegacion" class="navbar navbar-expand-lg bg-primary" data-bs-theme="light">
+        <div id="contenedorMenu" class="collapse navbar-collapse">
+            <ul id="listaNavegacion" class="navbar-nav">
+                <li id="itemInicio" class="nav-item">
+                    <a id="linkInicio" class="nav-link active" href="./index.html">Inicio</a>
+                </li>
+                <li id="itemGestion" class="nav-item">
+                    <a id="linkGestion" class="nav-link" href="./formulario.html">Gestión Usuarios</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="contenedorPrincipal" class="container">
+        <h1 id="tituloPaginaIndex">Sistema de Gestión de Usuarios</h1>
+
+        <div id="filaControles" class="row">
+            <div id="columnaSelect" class="col-md-4">
+                <select id="selectTipoData" class="form-select">
+                    <option value="">Seleccione Datos</option>
+                    <option value="users">Usuarios</option>
+                    <option value="posts">Publicaciones</option>
+                    <option value="comments">Comentarios</option>
+                </select>
+            </div>
+            <div id="columnaBotonCargar" class="col-md-6 d-flex align-items-end">
+                <button type="button" id="btnCargarDatos" class="btn btn-primary">Cargar Datos</button>
+            </div>
+        </div>
+
+        <div id="contenedorTabla" class="table-responsive">
+            <table id="tablaDinamica" class="table table-striped" style="width:100%">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

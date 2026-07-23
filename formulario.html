@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+
+    <link rel="stylesheet" href="./estilos/brite.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-2.3.2/datatables.min.css">
+    <link rel="stylesheet" href="./estilos/estilos.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-2.3.2/datatables.min.js"></script>
+    <script src="./scripts/gestion_usuarios.js"></script>
+</head>
+
+<body>
+    <nav id="menuNavegacion" class="navbar navbar-expand-lg bg-primary" data-bs-theme="light">
+        <div id="contenedorMenu" class="collapse navbar-collapse">
+            <ul id="listaNavegacion" class="navbar-nav">
+                <li id="itemInicio" class="nav-item">
+                    <a id="linkInicio" class="nav-link" href="./index.html">Inicio</a>
+                </li>
+                <li id="itemGestion" class="nav-item">
+                    <a id="linkGestion" class="nav-link active" href="./formulario.html">Gestión Usuarios</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="contenedorFormulario" class="container">
+
+        <div id="filaTituloForm" class="row">
+            <div id="columnaTituloForm" class="col-12">
+                <h1 id="tituloPaginaForm">Gestión Usuarios</h1>
+            </div>
+        </div>
+
+        <form id="formularioUsuario" novalidate>
+
+            <div id="filaFormGrupo1" class="row">
+                <div id="grupoNombre" class="col-md-4">
+                    <label id="labelNombre" for="inputNombre" class="form-label">Nombre *</label>
+                    <input type="text" id="inputNombre" name="nombre" class="form-control" placeholder="Ej: Juan Pérez">
+                    <div id="alertaNombre" class="alert alert-danger d-none" role="alert">
+                        El nombre es un campo requerido.
+                    </div>
+                </div>
+
+                <div id="grupoUsuario" class="col-md-4">
+                    <label id="labelUsuario" for="inputUsuario" class="form-label">Usuario *</label>
+                    <input type="text" id="inputUsuario" name="usuario" class="form-control" placeholder="Ej: jperez">
+                    <div id="alertaUsuario" class="alert alert-danger d-none" role="alert">
+                        El usuario es un campo requerido.
+                    </div>
+                </div>
+
+                <div id="grupoFechaIngreso" class="col-md-4">
+                    <label id="labelFechaIngreso" for="inputFechaIngreso" class="form-label">Fecha Ingreso *</label>
+                    <input type="date" id="inputFechaIngreso" name="fechaIngreso" class="form-control">
+                    <div id="alertaFechaIngreso" class="alert alert-danger d-none" role="alert">
+                        Debe seleccionar una fecha de ingreso válida.
+                    </div>
+                </div>
+            </div>
+
+            <div id="filaFormGrupo2" class="row">
+                <div id="grupoEmail" class="col-md-7">
+                    <label id="labelEmail" for="inputEmail" class="form-label">Email *</label>
+                    <input type="email" id="inputEmail" name="email" class="form-control"
+                        placeholder="ejemplo@mail.com">
+                    <div id="alertaEmail" class="alert alert-danger d-none" role="alert">
+                        Debe ingresar un email válido (ejemplo: usuario@servidor.com).
+                    </div>
+                </div>
+
+                <div id="grupoGenero" class="col-md-5">
+                    <label id="labelGenero" for="selectGenero" class="form-label">Género</label>
+                    <select id="selectGenero" name="genero" class="form-select">
+                        <option value="" selected>Seleccione una opción (Opcional)</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                        <option value="O">Otro</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="filaFormGrupo3" class="row">
+                <div id="grupoSitioWeb" class="col-md-12">
+                    <label id="labelSitioWeb" for="inputSitioWeb" class="form-label">Sitio Web</label>
+                    <input type="url" id="inputSitioWeb" name="sitioWeb" class="form-control"
+                        placeholder="https://ejemplo.com (Opcional)">
+                    <div id="alertaSitioWeb" class="alert alert-danger d-none" role="alert">
+                        Debe ingresar un sitio web válido que empiece con http:// o https://
+                    </div>
+                </div>
+            </div>
+
+            <div id="filaBotonesForm" class="row">
+                <div id="columnaBotonesForm" class="col">
+                    <button type="button" id="btnGuardar" class="btn btn-primary">Guardar</button>
+                    <button type="button" id="btnCancelar" class="btn btn-secondary">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

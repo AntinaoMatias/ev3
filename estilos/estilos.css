@@ -1,0 +1,53 @@
+#contenedorPrincipal,
+#contenedorFormulario {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#tituloPaginaIndex {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+#menuNavegacion {
+    margin-bottom: 1.25rem;
+}
+
+#columnaTituloForm {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+#filaControles {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+#columnaSelect {
+    width: 300px;
+}
+
+#filaFormGrupo1,
+#filaFormGrupo2,
+#filaFormGrupo3 {
+    margin-bottom: 1rem;
+}
+
+div[id^="alerta"] {
+    margin-top: 0.4rem;
+}
+
+#filaBotonesForm {
+    margin-top: 1.25rem;
+}
+
+#columnaBotonesForm {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
